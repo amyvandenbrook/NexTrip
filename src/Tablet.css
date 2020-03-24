@@ -1,0 +1,9 @@
+@media screen and (min-width: 768px) {
+    input[type=radio] {
+        margin-left: 20%;
+    }
+
+    .directions-container label + input {
+        margin-left: 25%;
+    }
+}
