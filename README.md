@@ -1,5 +1,6 @@
 # NexTrip
 The NexTrip application was developed using ReactJS and tested using Jest.  It is a one page application that dynamically loads and displays the routes, directions, and stops.
+<br/>This application requires npm to be installed, to install it please visit this site: https://npmjs.com/get-npm
 
 ## Build
 To build this project, please run the command: ```npm build```<br/>Note: This project has already been built and the build files can be seen in the build folders.
