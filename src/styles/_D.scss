@@ -1,37 +1,41 @@
 body {
     width: 80%;
     padding: 50px 10%;
-}
+} // End of body
 
-h4 {
+.disclaimer {
     font-size: 15px;
-}
 
-h4 + img {
-    height: 15px;
-}
+    img {
+        height: 15px;
+    } // End of .disclaimer img
+} // End of .disclaimer
 
-.route-container {
-    width: 80%;
-    margin-left: 10%;
-    padding: 30px;
-    left: 0px;
-}
+.route {
+    &_container {
+        width: 80%;
+        margin-left: 10%;
+        padding: 30px;
+        left: 0px;
 
-.route-container p {
-    width: 100%;
-    margin-left: 0%;
-}
+        p {
+            width: 100%;
+            margin-left: 0%;
+        } // End of .route_container p
+    } // End of .route_container
 
-select {
-    font-size: 16px;
-    border-radius: 26px;
-}
+    &_selector {
+        font-size: 16px;
+        border-radius: 26px;
+    } // End of .route_selector
+} // End of .route
 
-.directions-container label {
-    width: fit-content;
-}
+.directions {
+    &_label {
+        width: fit-content;
+    } // End of .directions_label
 
-.directions-container label + input {
-    margin-left: 30%;
-}
+    &_label + &_input {
+        margin-left: 30%;
+    } // End of .directions_label + .directions_input
+} // End of .directions

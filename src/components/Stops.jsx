@@ -15,14 +15,14 @@ const Stops = (props) => {
     }, [dispatch, route, direction])
 
     return stopData.length > 0 ? (
-        <>
-            <h2>Stops</h2>
+        <div className="stops">
+            <h2 className="header--2">Stops</h2>
             <ul>
                 {stopData.map((stop, index) => (
                     <li key={index}>{stop.Text}</li>
                 ))}
             </ul>
-        </>
+        </div>
     ) : null
 }
 

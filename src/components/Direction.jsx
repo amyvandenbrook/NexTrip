@@ -28,12 +28,13 @@ const Direction = (props) => {
     }, [dispatch, directionData, setDirection])
 
     return directionData?.length > 0 ? (
-        <div className="directions-container">
-            <p className="description"> Choose a direction : </p>
+        <div className="directions_container">
+            <p className="directions_heading"> Choose a direction : </p>
             {directionData.map((direction, index) => {
                 return (
                     <React.Fragment key={index}>
                         <input
+                            className="directions_input"
                             type="radio"
                             name="Direction"
                             id={direction.Value}
@@ -43,7 +44,10 @@ const Direction = (props) => {
                             }}
                             defaultChecked={index === 0}
                         ></input>
-                        <label htmlFor={direction.Value}>
+                        <label
+                            htmlFor={direction.Value}
+                            className="directions_label"
+                        >
                             {direction.Text.toLowerCase()}
                         </label>
                     </React.Fragment>

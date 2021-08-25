@@ -22,6 +22,7 @@ const Route = () => {
                 directions and stops available for you!
             </p>
             <select
+                className="route_selector"
                 id="Route"
                 data-testid="Select-Route"
                 name="Route"
