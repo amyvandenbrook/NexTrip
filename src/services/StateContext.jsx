@@ -3,7 +3,12 @@ import Reducer from './Reducer.jsx'
 
 const StateContext = createContext()
 
-const StateProvider = ({ children, initialState }) => {
+/**
+ * StateProvider
+ * @param {*} children Content to render inside of the Provider service
+ * @param {object} initialState An optional initialState object to use for the state of the application
+ */
+const StateProvider = ({ children, initialState = {} }) => {
     const defaultState = {
         routeData: [],
         route: undefined,

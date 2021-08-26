@@ -2,9 +2,14 @@ import React, { useContext, useEffect } from 'react'
 import { StateContext } from '../services/StateContext.jsx'
 import { getRoutes } from '../services/AxiosService.jsx'
 
+/**
+ * Route
+ * @returns A selector containing the route options available.
+ */
 const Route = () => {
     const { routeChanged, routeData, dispatch } = useContext(StateContext)
 
+    // on initial page load request routes from API
     useEffect(() => {
         const routesPromise = getRoutes()
         if (routesPromise) {
@@ -14,6 +19,7 @@ const Route = () => {
         }
     }, [dispatch])
 
+    // function to dispatch set_route action
     const setRoute = (event) => {
         dispatch({ type: 'set_route', payload: event.target.value })
     }

@@ -3,9 +3,14 @@ import { StateContext } from '../services/StateContext.jsx'
 import { getDirections } from '../services/AxiosService.jsx'
 import { jumpTo } from '../services/BrowserService.jsx'
 
-const Direction = (props) => {
+/**
+ * Direction
+ * @returns Toggles to choose a direction for a given route.
+ */
+const Direction = () => {
     const { route, directionData, dispatch } = useContext(StateContext)
 
+    // Request direction data when a route is updated / defined
     useEffect(() => {
         if (route) {
             getDirections(route).then((result) => {
@@ -14,6 +19,7 @@ const Direction = (props) => {
         }
     }, [dispatch, route])
 
+    // function to dispatch set_direction action
     const setDirection = useCallback(
         (direction) => {
             dispatch({ type: 'set_direction', payload: direction })
@@ -21,6 +27,7 @@ const Direction = (props) => {
         [dispatch]
     )
 
+    // set initial direction if directionData exists and send users to Directions anchor
     useEffect(() => {
         if (directionData.length > 0) {
             setDirection(directionData[0].Value)

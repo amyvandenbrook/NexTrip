@@ -2,9 +2,14 @@ import React, { useContext, useEffect } from 'react'
 import { StateContext } from '../services/StateContext.jsx'
 import { getStops } from '../services/AxiosService.jsx'
 
-const Stops = (props) => {
+/**
+ * Stops
+ * @returns A list containing the stops available for a given route and direction.
+ */
+const Stops = () => {
     const { dispatch, route, direction, stopData } = useContext(StateContext)
 
+    // request new stopData when route or direction is updated
     useEffect(() => {
         if (route && direction) {
             getStops(route, direction).then((result) => {

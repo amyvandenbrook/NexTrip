@@ -1,3 +1,8 @@
+/**
+ * Reducer
+ * @param {object} state The initial state of the reducer
+ * @param {object} action An action to be dispatched
+ */
 const Reducer = (state, action) => {
     switch (action.type) {
         case 'set_route_data':

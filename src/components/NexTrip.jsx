@@ -5,6 +5,10 @@ import Route from './Route'
 import Stops from './Stops'
 import '../styles/main.scss'
 
+/**
+ * NexTrip
+ * @returns the components that render the NexTrip application
+ */
 const NexTrip = () => {
     return (
         <StateProvider>
