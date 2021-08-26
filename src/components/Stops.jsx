@@ -8,7 +8,6 @@ const Stops = (props) => {
     useEffect(() => {
         if (route && direction) {
             getStops(route, direction).then((result) => {
-                console.log(result)
                 dispatch({ type: 'set_stop_data', payload: result.data })
             })
         }

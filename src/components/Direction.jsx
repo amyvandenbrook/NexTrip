@@ -8,7 +8,6 @@ const Direction = (props) => {
     useEffect(() => {
         if (route) {
             getDirections(route).then((result) => {
-                console.log(result)
                 dispatch({ type: 'set_direction_data', payload: result.data })
             })
         }

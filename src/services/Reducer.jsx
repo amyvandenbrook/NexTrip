@@ -27,7 +27,7 @@ const Reducer = (state, action) => {
                 stopData: action.payload,
             }
         default:
-            console.log('no type defined')
+            return state
     }
 }
 
