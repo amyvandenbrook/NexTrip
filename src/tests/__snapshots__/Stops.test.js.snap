@@ -3,6 +3,7 @@
 exports[`Stops requests and displays stops if directions & route exists 1`] = `
 <div
   className="stops"
+  id="Stops"
 >
   <h2
     className="header--2"

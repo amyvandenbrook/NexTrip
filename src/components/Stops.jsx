@@ -14,7 +14,7 @@ const Stops = (props) => {
     }, [dispatch, route, direction])
 
     return stopData.length > 0 ? (
-        <div className="stops">
+        <div className="stops" id="Stops">
             <h2 className="header--2">Stops</h2>
             <ul>
                 {stopData.map((stop, index) => (

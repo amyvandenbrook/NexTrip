@@ -1,6 +1,7 @@
 import React, { useCallback, useContext, useEffect } from 'react'
 import { StateContext } from '../services/StateContext.jsx'
 import { getDirections } from '../services/AxiosService.jsx'
+import { jumpTo } from '../services/BrowserService.jsx'
 
 const Direction = (props) => {
     const { route, directionData, dispatch } = useContext(StateContext)
@@ -23,11 +24,12 @@ const Direction = (props) => {
     useEffect(() => {
         if (directionData.length > 0) {
             setDirection(directionData[0].Value)
+            jumpTo('Directions')
         }
     }, [dispatch, directionData, setDirection])
 
     return directionData?.length > 0 ? (
-        <div className="directions_container">
+        <div className="directions_container" id="Directions">
             <p className="directions_heading"> Choose a direction : </p>
             {directionData.map((direction, index) => {
                 return (
@@ -40,6 +42,7 @@ const Direction = (props) => {
                             value={direction.Value}
                             onClick={() => {
                                 setDirection(direction.Value)
+                                jumpTo('Stops')
                             }}
                             defaultChecked={index === 0}
                         ></input>

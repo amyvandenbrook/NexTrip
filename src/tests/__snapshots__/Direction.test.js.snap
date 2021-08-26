@@ -3,6 +3,7 @@
 exports[`Direction requests and displays directions if route exists 1`] = `
 <div
   className="directions_container"
+  id="Directions"
 >
   <p
     className="directions_heading"
