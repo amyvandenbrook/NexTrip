@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Direction requests and displays directions if route exists 1`] = `
+<div
+  className="directions_container"
+>
+  <p
+    className="directions_heading"
+  >
+     Choose a direction : 
+  </p>
+  <input
+    className="directions_input"
+    defaultChecked={true}
+    id="mockValue"
+    name="Direction"
+    onClick={[Function]}
+    type="radio"
+    value="mockValue"
+  />
+  <label
+    className="directions_label"
+    htmlFor="mockValue"
+  >
+    mockdirection
+  </label>
+</div>
+`;

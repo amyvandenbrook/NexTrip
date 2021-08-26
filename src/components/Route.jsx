@@ -6,9 +6,12 @@ const Route = () => {
     const { routeChanged, routeData, dispatch } = useContext(StateContext)
 
     useEffect(() => {
-        getRoutes().then((result) => {
-            dispatch({ type: 'set_route_data', payload: result.data })
-        })
+        const routesPromise = getRoutes()
+        if (routesPromise) {
+            routesPromise.then((result) => {
+                dispatch({ type: 'set_route_data', payload: result.data })
+            })
+        }
     }, [dispatch])
 
     const setRoute = (event) => {

@@ -3,8 +3,8 @@ import Reducer from './Reducer.jsx'
 
 const StateContext = createContext()
 
-const StateProvider = ({ children }) => {
-    const initialState = {
+const StateProvider = ({ children, initialState }) => {
+    const defaultState = {
         routeData: [],
         route: undefined,
         routeChanged: false,
@@ -12,7 +12,10 @@ const StateProvider = ({ children }) => {
         direction: '',
         stopData: [],
     }
-    const [state, dispatch] = useReducer(Reducer, initialState)
+    const [state, dispatch] = useReducer(Reducer, {
+        ...defaultState,
+        ...initialState,
+    })
 
     return (
         <StateContext.Provider

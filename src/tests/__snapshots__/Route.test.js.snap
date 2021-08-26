@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Route is created properly before getting any routes 1`] = `
+Array [
+  <p>
+    Please select a route from the options below to see the directions and stops available for you!
+  </p>,
+  <select
+    className="route_selector"
+    data-testid="Select-Route"
+    id="Route"
+    name="Route"
+    onChange={[Function]}
+  >
+    <option
+      value={-1}
+    >
+      Select a Route
+    </option>
+    ;
+     
+    <option />
+  </select>,
+  <i
+    className="fas fa-arrow-circle-down"
+  />,
+]
+`;

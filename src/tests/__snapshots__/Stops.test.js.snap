@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stops requests and displays stops if directions & route exists 1`] = `
+<div
+  className="stops"
+>
+  <h2
+    className="header--2"
+  >
+    Stops
+  </h2>
+  <ul>
+    <li>
+      mockStop1
+    </li>
+    <li>
+      mockStop2
+    </li>
+    <li>
+      mockStop3
+    </li>
+  </ul>
+</div>
+`;

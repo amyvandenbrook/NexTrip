@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stops generates the application with default data 1`] = `
+<div
+  className="content"
+>
+  <div
+    className="disclaimer"
+  >
+    <p>
+      This application is sourced by real-time data from 
+    </p>
+    <img
+      alt="Metro Transit Logo"
+      name="Metro Transit"
+      src="https://www.metrotransit.org/img/MetroTransitLogo.svg"
+    />
+  </div>
+  <h1
+    className="header--1"
+  >
+    NexTrip
+  </h1>
+  <div
+    className="route_container"
+  >
+    <p>
+      Please select a route from the options below to see the directions and stops available for you!
+    </p>
+    <select
+      className="route_selector"
+      data-testid="Select-Route"
+      id="Route"
+      name="Route"
+      onChange={[Function]}
+    >
+      <option
+        value={-1}
+      >
+        Select a Route
+      </option>
+      ;
+       
+    </select>
+    <i
+      className="fas fa-arrow-circle-down"
+    />
+    <div
+      className="directions_container"
+      data-testid="Direction-Container"
+    />
+  </div>
+</div>
+`;
